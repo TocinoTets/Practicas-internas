@@ -1,0 +1,54 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: #E9ECF4;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    width: 95%;
+    max-width: 1000px;
+    max-height: 950px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    row-gap: 5px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    justify-content: center;
+
+    grid-template-areas: 
+                        'caja caja'
+                        'ejemplo ejemplo';
+}
+.caja{
+    display: grid;
+    grid-area: caja;
+    background-color: slategray;
+}
+.ejemplo{
+    display: grid;
+    justify-content: center;
+    width: 90%;
+    min-height: 430px;
+    max-width: 1200px;
+    max-height: 780px;
+    grid-gap: 80px;
+    grid-area: ejemplo;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.container > div{
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.ejemplo .box{
+    position: relative;
+    background: var(--img);
+    background-position: center;
+    background-size: cover;
+    background-color:cornsilk;
+    border: 2px solid black;
+}
